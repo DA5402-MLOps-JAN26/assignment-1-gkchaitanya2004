@@ -136,11 +136,11 @@ def save_results(df,loss,accuracy,status="success"):
     )
 
 
+    final_results_dir = os.path.join(app.root_path, results_dir)
+    if not os.path.exists(final_results_dir):
+        os.makedirs(final_results_dir)
     
-    if not os.path.exists(results_dir):
-        os.makedirs(results_dir)
-    
-    results_path = os.path.join(results_dir, results_file)
+    results_path = os.path.join(final_results_dir, results_file)
     df.to_csv(results_path, index=False)
 
     return df 
