@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> {{ title }}</title>
+
+<style>
+body {   
+    background-color: rgb(39, 39, 39); 
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px; 
+    color: rgb(168, 211, 50); 
+}
+
+.center{
+    display: flex;         
+    justify-content: center; 
+    align-items: center;  
+}
+
+.container {
+    width: 60%;          
+    padding: 70px;
+    border-radius: 10px;
+    background-color: rgba(218, 218, 218, 0.9);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    color: #333333;
+}
+
+.table-container {
+    max-height: 400px; 
+    width: 100%;
+    overflow-x: auto; 
+    overflow-y: auto; 
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+th{
+    position: sticky;
+    top: 0;
+    background-color: #285e1b;
+    border: 1px solid #333333;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    z-index: 1;
+
+}
+
+td {
+    border: 1px solid #333333;
+    padding: 12px;
+    text-align: left;   
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: wheat;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-1{
+    background-color: #285e1b;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+
+.btn-2{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-1:hover {
+    background-color: #1f4214;
+}
+
+.btn-2:hover {
+    background-color: #333333;
+}
+
+</style>
+
+<body>
+    <div class="header">
+        <h1>Analysis Complete</h1>
+        <h2>Here are the predictions for your uploaded data file</h2>
+    </div>
+
+    <div class="center">
+
+        <div class="container">
+            
+            <div class="table-container">
+                <table>
+                    {{ table|safe }}
+                </table>
+            </div>
+
+            <div class="btn-group">
+                <a  class="btn-1" href="/download" > Download Results</a >
+                <a class="btn-2" href="/">Upload Another File</a>
+            
+        </div>
+    </div>
+</body>
+</html>

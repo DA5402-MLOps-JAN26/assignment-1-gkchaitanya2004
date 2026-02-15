@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> {{ title }}</title>
+
+<style>
+body {   
+    background-color: rgb(39, 39, 39); 
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px; 
+    color: rgb(168, 211, 50); 
+}
+
+.center{
+    height: 70vh;         
+    display: flex;         
+    justify-content: center; 
+    align-items: center;  
+}
+
+.container {
+    width: 500px;          
+    padding: 100px;
+    border-radius: 10px;
+    background-color: rgba(218, 218, 218, 0.9);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    color: #333333;
+}
+
+.container h2 {
+    margin-left: -60px;
+    margin-top: -50px;  
+    text-align: left;   
+    color: black;
+}
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed black;
+    background-color: rgba(255, 255, 255, 0.1); 
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    height: 100px;   
+}
+
+
+.upload:hover {
+    background-color: white;
+    border-color: black;
+}
+
+a {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #4b0082     
+}
+
+input[type="submit"] {
+    background-color: black;
+}
+
+input[type="submit"]:hover {
+    background-color: #285e1b;
+}
+
+
+</style>
+
+<body>
+    <div class="header">
+        <h1>Welcome to Machine Failure detector </h1>
+        <h2>To get accurate data upload a .csv file and to know the format of the .csv <a href="https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset">click here</a></h2>
+    </div>
+
+    <div class="center">
+    <div class="container">
+        <h2>Upload Files</h2>
+        <br><br>
+        <form action="/results" method="POST" enctype="multipart/form-data" >
+            <div class="upload">
+                <input type="file" id="files" name="files">
+            </div>
+            <br><br>
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+    </div>
+</body>
+</html>

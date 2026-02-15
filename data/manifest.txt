@@ -1,0 +1,79 @@
+Manifest File for Predictive_Maintenance_v1
+Author: Krishna Chaitanya G
+
+Version Cotrol System : vX.Y.Z
+	- where X represent raw data version
+	- where Y represent cleaned data version
+	- where Z represent final(cleaned + scaled) data version
+================================================================================
+
+File Name : v1.0.0_raw.csv
+	- Version: v1.0.0
+	- Derived From: v1.0.0
+	- File Path: data/raw/v1.0.0_raw.csv
+	- Created on: 2026-02-15 12:10:50.542301
+	- Source: data/raw/ai4i2020.csv
+	- Script Used: src/data_prep.py
+	- Description : 
+ 		- Created a copy of the raw data with name change to v1.0.0_raw.csv 
+		- This is done for to track which source raw file belong to which version and for easier tracking
+
+File Name : v1.1.0_cleaned.csv
+	- File Version: v1.1.0
+	- Derived From: v1.0.0
+	- File Path: data/processed/v1.1.0_cleaned.csv
+	- Created on: 2026-02-15 12:10:50.605088
+	- Source: data/raw/ai4i2020.csv
+	- Script Used: src/data_prep.py
+	- Description : 
+ 		- Cleaned the train data by removing unnecessary columns 
+		- Removed rows with null values 
+		- Handled missing values 
+		- Renamed some of the columns for better usage.
+
+File Name : v1.1.1_scaled.csv
+	- File Version: v1.1.1
+	- Derived From: v1.1.0
+	- File Path: data/processed/v1.1.1_scaled.csv
+	- Created on: 2026-02-15 12:10:50.650881
+	- Source: data/raw/ai4i2020.csv
+	- Script Used: src/data_prep.py
+	- Description : 
+ 		- Scaled the numerical columns using StandardScaler 
+		- Mapped the categorical column 'Type' to numerical values.
+
+File Name : v2.0.0_raw.csv
+	- Version: v2.0.0
+	- Derived From: v1.0.0
+	- File Path: data/raw/v2.0.0_raw.csv
+	- Created on: 2026-02-15 12:13:16.558561
+	- Source: data/raw/new_data.csv
+	- Script Used: src/data_prep.py
+	- Description : 
+ 		- Created a copy of the raw data with name change to v2.0.0_raw.csv 
+		- This is done for to track which source raw file belong to which version and for easier tracking
+
+File Name : v2.1.0_cleaned.csv
+	- File Version: v2.1.0
+	- Derived From: v2.0.0
+	- File Path: data/processed/v2.1.0_cleaned.csv
+	- Created on: 2026-02-15 12:13:16.597213
+	- Source: data/raw/new_data.csv
+	- Script Used: src/data_prep.py
+	- Description : 
+ 		- Cleaned the train data by removing unnecessary columns 
+		- Removed rows with null values 
+		- Handled missing values 
+		- Renamed some of the columns for better usage.
+
+File Name : v2.1.1_scaled.csv
+	- File Version: v2.1.1
+	- Derived From: v2.1.0
+	- File Path: data/processed/v2.1.1_scaled.csv
+	- Created on: 2026-02-15 12:13:16.665762
+	- Source: data/raw/new_data.csv
+	- Script Used: src/data_prep.py
+	- Description : 
+ 		- Scaled the numerical columns using StandardScaler 
+		- Mapped the categorical column 'Type' to numerical values.
+

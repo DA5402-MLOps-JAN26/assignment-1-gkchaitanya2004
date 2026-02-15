@@ -1,0 +1,40 @@
+{
+    "v1": {
+        "model_algorithm": "LogisticRegression",
+        "Training Date": "2026-02-15 12:11:17.759627",
+        "data_version": "v1.1.1_scaled.csv",
+        "model_params": {
+            "algorithm": "LogisticRegression",
+            "class_weights": "balanced",
+            "max_depth": 10,
+            "val_size": 0.2,
+            "max_iter": 3000,
+            "random_state": 42
+        },
+        "git_hash": "205249a",
+        "val_accuracy": 82.5,
+        "precision": 0.9524,
+        "recall": 0.825,
+        "f1_score": 0.8748,
+        "val_log_loss": 0.3965
+    },
+    "v2": {
+        "model_algorithm": "LogisticRegression",
+        "Training Date": "2026-02-15 12:13:27.551958",
+        "data_version": "v2.1.1_scaled.csv",
+        "model_params": {
+            "algorithm": "LogisticRegression",
+            "class_weights": "balanced",
+            "max_depth": 10,
+            "val_size": 0.2,
+            "max_iter": 3000,
+            "random_state": 42
+        },
+        "git_hash": "205249a",
+        "val_accuracy": 78.23,
+        "precision": 0.9583,
+        "recall": 0.7823,
+        "f1_score": 0.8508,
+        "val_log_loss": 0.4765
+    }
+}

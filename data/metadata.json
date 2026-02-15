@@ -1,0 +1,118 @@
+{
+    "v1.1.1": {
+        "columns": [
+            "Type",
+            "air_temp",
+            "process_temp",
+            "rotational_speed",
+            "torque",
+            "tool_wear",
+            "Machine failure"
+        ],
+        "columns_renamed": {
+            "air_temp": "Air temperature [K]",
+            "process_temp": "Process temperature [K]",
+            "torque": "Torque [Nm]",
+            "tool_wear": "Tool wear [min]",
+            "rotational_speed": "Rotational speed [rpm]"
+        },
+        "columns_dropped": [
+            "UDI",
+            "Product ID",
+            "TWF",
+            "HDF",
+            "PWF",
+            "OSF",
+            "RNF"
+        ],
+        "mapping": {
+            "L": 0,
+            "M": 1,
+            "H": 2
+        },
+        "scaling_method": {
+            "method": "StandardScaler",
+            "columns_scaled": [
+                "air_temp",
+                "process_temp",
+                "torque",
+                "tool_wear",
+                "rotational_speed"
+            ],
+            "parameters": {
+                "mean": [
+                    300.4149714285714,
+                    310.0245,
+                    39.92557142857143,
+                    108.59228571428571,
+                    1540.5831428571428
+                ],
+                "scale": [
+                    2.1319954098813394,
+                    1.572428887785663,
+                    10.033427720192464,
+                    63.81479271345496,
+                    183.2186451876778
+                ]
+            }
+        }
+    },
+    "v2.1.1": {
+        "columns": [
+            "Type",
+            "air_temp",
+            "process_temp",
+            "rotational_speed",
+            "torque",
+            "tool_wear",
+            "Machine failure"
+        ],
+        "columns_renamed": {
+            "air_temp": "Air temperature [K]",
+            "process_temp": "Process temperature [K]",
+            "torque": "Torque [Nm]",
+            "tool_wear": "Tool wear [min]",
+            "rotational_speed": "Rotational speed [rpm]"
+        },
+        "columns_dropped": [
+            "UDI",
+            "Product ID",
+            "TWF",
+            "HDF",
+            "PWF",
+            "OSF",
+            "RNF"
+        ],
+        "mapping": {
+            "L": 0,
+            "M": 1,
+            "H": 2
+        },
+        "scaling_method": {
+            "method": "StandardScaler",
+            "columns_scaled": [
+                "air_temp",
+                "process_temp",
+                "torque",
+                "tool_wear",
+                "rotational_speed"
+            ],
+            "parameters": {
+                "mean": [
+                    299.61763846153843,
+                    309.4673923076923,
+                    41.91490769230769,
+                    108.00569230769231,
+                    1539.043076923077
+                ],
+                "scale": [
+                    2.410113714214287,
+                    2.3884157542868123,
+                    11.037866609955548,
+                    63.860707540690726,
+                    179.9956298351805
+                ]
+            }
+        }
+    }
+}
